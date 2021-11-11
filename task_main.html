@@ -27,7 +27,7 @@
                 bts[i] =  $('<input/>').attr({type: 'button', name: id_text, value:value_text, id:id_text});
             }
            for(let i in bts)
-            {    $(bts[i]).css({"justify-content": "center",    //$("#"+bts[i].attr("id")) this didn't work 
+            {    $(bts[i]).css({"justify-content": "center",    
                             "align-items": "center",
                             "display":"grid",
                             "margin" : "10px",
@@ -41,7 +41,7 @@
             }
             bts.forEach(i=>{
                 //alert("#"+i.attr("id"));
-                $(i).on({   //$("#"+i.attr("id")) this didn't work, only click : worked with this and mouseenter and leave, hover didn't
+                $(i).on({   
                    mouseenter : function(){
                         $(this).animate({opacity :"0.7"});
                    },
