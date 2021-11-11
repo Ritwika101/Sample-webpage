@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="task5_css.css">
+    <link rel = "stylesheet" href="task4_css.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #div1{
+            float:right;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+   
+        $(document).ready(function(){
+            $("#test").click(function(){
+                $("#div1").slideToggle("slow");
+            });
+            var bts =[];
+            for(var i=0; i<9; i++) 
+            {
+                var var_text = "b"+i;
+                var id_text= "bts"+i;
+                var value_text = "Dynamic Button "+i;
+                bts[i] =  $('<input/>').attr({type: 'button', name: id_text, value:value_text, id:id_text});
+            }
+           for(let i in bts)
+            {    $(bts[i]).css({"justify-content": "center",    //$("#"+bts[i].attr("id")) this didn't work 
+                            "align-items": "center",
+                            "display":"grid",
+                            "margin" : "10px",
+                            "padding" : "10px",
+                            "background-color" : "#4d88ff",
+                            "color" : "white",
+                            "font-family":"'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                            "border":"1px solid black" 
+                            });
+                $("#div1").append(bts[i]);
+            }
+            bts.forEach(i=>{
+                //alert("#"+i.attr("id"));
+                $(i).on({   //$("#"+i.attr("id")) this didn't work, only click : worked with this and mouseenter and leave, hover didn't
+                   mouseenter : function(){
+                        $(this).animate({opacity :"0.7"});
+                   },
+                   mouseleave : function(){
+                        $(this).animate({opacity :"1"});
+                   },
+                   click : function(){
+                        var go_to_url = "https://google.com";
+                        window.open(go_to_url, '_blank');
+                    },     
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="inner_header">     
+            <img src= "dell.png" class="logo">
+            
+            <ul class="navigation">
+                <li><a href="https://google.com" target='_blank'>Home</a></li>
+                <li><a href="https://google.com" target='_blank'>About</a></li>
+                <li><a href="https://google.com" target='_blank'>Portfolio</a></li>
+                <li>
+                    <a href="https://google.com">Contact <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="https://google.com" target='_blank'>Chat</a> </li> 
+                        <li><a href="https://google.com" target='_blank'>IT Support</a></li>
+                        <li><a href="https://google.com" target='_blank'>HR Support</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://google.com" target='_blank'>Services <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="https://google.com" target='_blank'>Web Design</a></li>
+                        <li><a href="https://google.com" target='_blank'>App Design</a></li>
+                        <li><a href="https://google.com" target='_blank'>More</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="facebook.png" id="profile_pic">
+            <img src="gmail.png" id="profile_pic_g">
+            <a href="https://google.com" target='_blank' id="login_email">Login</p>     
+        </div>    
+    </div>
+    <div class="list_container"> 
+       <ul class="images">
+           <li><a href="https://google.com" target='_blank'><img src="pic1.png" class="one"><span class="stud">Student Programs</span></a></li>
+           <li><a href="https://google.com" target='_blank'><img src="pic3.jpg" class="one"><span class="col">Collaboration</span></a></li>
+           <li><a href="https://google.com" target='_blank'><img src="pic2.jpg" class="one"><span class="car">Career Development</span></a></li>
+           <li><a href="https://google.com" target='_blank'><img src="pic4.jpg" class="one"><span class="why">Why We Work Here</span></a></li>
+           <li><a href="https://google.com" target='_blank'><img src="pic5.jpg" class="one"><span class="stud">Our Workplace</span></a></li>
+           <li><a href="https://google.com" target='_blank'><img src="pic6.jpg" class="one"><span class="col">Why Choose Us</span></a></li>
+       </ul>    
+    </div>
+    <div id="div1" ></div>
+</body>
+</html>
+
+<script>
+
+</script>

@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+.header{
+    background-color: #264ABF;
+    height : 100px;
+    width:100%;
+    display:block;
+}
+.inner_header{
+    
+    height : 100%;
+    width : 900px; 
+    display:block;
+    margin :auto;  
+}
+
+.inner_header ul{
+    float : right;
+    list-style: none;
+    position : relative;
+}
+.inner_header ul li{
+    position:relative;
+    float:left;
+    color:white;   
+    padding: 18px 18px;
+
+}
+.inner_header ul li a{
+    color:white;
+    text-decoration: none;
+    line-height: 80px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 10px;
+
+}
+.inner_header ul li a:hover{
+    border-radius : 5px;
+    box-shadow : 0 0 5px #ffff;
+
+}
+.inner_header ul ul li a:hover{
+    box-shadow : none;
+
+}
+
+.inner_header ul li:hover > ul{
+    opacity:1;
+    visibility: visible;
+    top :100px;
+}
+.inner_header ul li ul{
+    position : absolute;
+    top:130px;
+    opacity : 0;
+    visibility: hidden; 
+    transition : top .3s; 
+    
+}
+.inner_header ul ul li{
+    z-index: 1;
+    position : relative;
+    margin:0px;
+    height:30px;
+    padding:none;
+    width:140px;
+    float:none;
+    display:list-item;
+    background-color: #264ABF;
+    border : 0.5px solid #65A5E7; 
+}
+.inner_header ul ul li:hover{
+    opacity:0.5;
+}
+.inner_header ul ul li a{
+    bottom : 5px;
+    line-height:40px;
+}
+.logo{  
+  padding : 10px;
+  width :9%;
+  height : 80%;
+}
+
+.navigtion{
+    float : left;
+}
+.inner_header #login_email{
+        position:relative;
+        float:right;
+        line-height:10px;
+        padding-bottom:2px;
+        background-color: #264ABF;
+        color:white;
+        padding:10px;
+        left:79%;
+        top:15%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18x;
+        border : 0.5px solid white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px white;
+  }
+  .inner_header #login_email:hover{
+      opacity:0.5;
+  }
+  .inner_header #profile_pic{
+      position:relative;
+      float:right;
+      left:78%;
+      top:15%;
+      width:25px;
+      height:25px;
+      background-color: #264ABF;
+      color:white;
+      
+  }
+  .inner_header #profile_pic_g{
+      position:relative;
+      float:right;
+      left:84%;
+      top:15%;
+      width:25px;
+      height:25px;
+      background-color: #264ABF;
+      color:black;
+      
+  }
