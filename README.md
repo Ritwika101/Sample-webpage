@@ -1,2 +1,2 @@
 # Sample-webpage
-This is a sample webpage developed, suitable for any business/organization. This was developed as one of the tasks under the TMX team of Dell technologies under SharePoint environment. Main technologies and coding languages used are HTML, CSS, Javascript, jQuery, AJAX.
+This is a sample webpage developed, suitable for any business/organization. This was developed as one of the tasks under the TMX team of Dell technologies under SharePoint environment. Main technologies and coding languages used are HTML, CSS, Javascript, jQuery, AJAX. I had made AJAX calls to Sharepoint lists to get the link which would open on each button click, but that had to be removed from this github code.
